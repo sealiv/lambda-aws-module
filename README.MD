@@ -28,4 +28,12 @@
 ```
 10) Action/Deploy API (new Stages -> name = 'dev', for example)
 
-
+### Create Lambda-function from AWS CLI
+```
+aws lambda create-function \
+    --function-name my-function-product \
+    --runtime java11 \
+    --zip-file fileb://"d:\global mentoring program\AWS_1\lambda-aws-module\target\lambda-aws-module-1.0-SNAPSHOT.jar" \
+    --handler org.aleks4ay.App::handleRequest \
+    --role arn:aws:iam::635067988515:role/lambda-dynamo-db
+```
